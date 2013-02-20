@@ -1,0 +1,2 @@
+export rvm_path="/Users/jamie/.rvm"
+rvm_auto_reload_flag=1

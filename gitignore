@@ -1,0 +1,8 @@
+.*-cache
+*.swp
+.DS_Store
+.env
+backup
+tags
+tmp
+_site

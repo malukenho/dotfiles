@@ -1,0 +1,36 @@
+[submodule "tmux/bundles/tmux-powerline"]
+	path = tmux/bundles/tmux-powerline
+	url = git@github.com:erikw/tmux-powerline.git
+[submodule "tmux/bundles/tmux-colors-solarized"]
+	path = tmux/bundles/tmux-colors-solarized
+	url = git@github.com:seebi/tmux-colors-solarized.git
+[submodule "vim/bundle/JSON.vim"]
+	path = vim/bundle/JSON.vim
+	url = git@github.com:vim-scripts/JSON.vim.git
+[submodule "vim/bundle/ack.vim"]
+	path = vim/bundle/ack.vim
+	url = git@github.com:mileszs/ack.vim.git
+[submodule "vim/bundle/html5.vim"]
+	path = vim/bundle/html5.vim
+	url = git@github.com:othree/html5.vim.git
+[submodule "vim/bundle/tmux.vim"]
+	path = vim/bundle/tmux.vim
+	url = git@github.com:zaiste/tmux.vim.git
+[submodule "vim/bundle/vim-handlebars"]
+	path = vim/bundle/vim-handlebars
+	url = git@github.com:nono/vim-handlebars.git
+[submodule "vim/bundle/vim-markdown"]
+	path = vim/bundle/vim-markdown
+	url = git@github.com:plasticboy/vim-markdown.git
+[submodule "vim/bundle/vim-powerline"]
+	path = vim/bundle/vim-powerline
+	url = git@github.com:Lokaltog/vim-powerline.git
+[submodule "vim/bundle/vim-puppet"]
+	path = vim/bundle/vim-puppet
+	url = git@github.com:rodjek/vim-puppet.git
+[submodule "vim/bundle/vim-rails"]
+	path = vim/bundle/vim-rails
+	url = https://github.com/tpope/vim-rails
+[submodule "vim/bundle/vim-rdoc"]
+	path = vim/bundle/vim-rdoc
+	url = git@github.com:depuracao/vim-rdoc.git
