@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cd ~
 ln -sh dotfiles/bash_profile .bash_profile
