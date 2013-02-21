@@ -1,18 +1,20 @@
 #!/bin/bash
 
 cd ~
-ln -s dotfiles/bash_profile .bash_profile
-ln -s dotfiles/bashrc .bashrc
-ln -s dotfiles/caprc .caprc
-ln -s dotfiles/gemrc .gemrc
-ln -s dotfiles/gitconfig .gitconfig
-ln -s dotfiles/githelpers .githelpers
-ln -s dotfiles/gitignore .gitignore
-ln -s dotfiles/irbrc .irbrc
-ln -s dotfiles/rvmrc .rvmrc
-ln -s dotfiles/siegerc .siegerc
-ln -s dotfiles/tmux .tmux
-ln -s .tmux/tmux.conf .tmux.conf
-ln -s dotfiles/vim .vim
-ln -s .vim/vimrc .vimrc
-ln -s dotfiles/zshrc .zshrc
+ln -sh dotfiles/bash_profile .bash_profile
+ln -sh dotfiles/bashrc .bashrc
+ln -sh dotfiles/caprc .caprc
+ln -sh dotfiles/gemrc .gemrc
+ln -sh dotfiles/gitconfig .gitconfig
+ln -sh dotfiles/githelpers .githelpers
+ln -sh dotfiles/gitignore .gitignore
+ln -sh dotfiles/git-prompt .git-prompt
+ln -sh dotfiles/helpers .helpers
+ln -sh dotfiles/irbrc .irbrc
+ln -sh dotfiles/rvmrc .rvmrc
+ln -sh dotfiles/siegerc .siegerc
+ln -sh dotfiles/tmux .tmux
+ln -sh .tmux/tmux.conf .tmux.conf
+ln -sh dotfiles/vim .vim
+ln -sh .vim/vimrc .vimrc
+ln -sh dotfiles/zshrc .zshrc

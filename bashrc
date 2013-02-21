@@ -29,9 +29,9 @@ alias go='bundle exec foreman start'
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 
 # Functions
-[[ $- == *i* ]] && . ~/git-prompt/git-prompt.sh
-[[ $- == *i* ]] && . ~/.shell/jump_to_project.sh
-[[ $- == *i* ]] && . ~/.shell/titles.sh
+[[ $- == *i* ]] && . ~/.git-prompt/git-prompt.sh
+[[ $- == *i* ]] && . ~/.helpers/jump_to_project.sh
+[[ $- == *i* ]] && . ~/.helpers/titles.sh
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
