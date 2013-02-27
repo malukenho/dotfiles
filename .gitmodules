@@ -43,3 +43,6 @@
 [submodule "vim/bundle/Align"]
 	path = vim/bundle/Align
 	url = git@github.com:vim-scripts/Align.git
+[submodule "vim/bundle/vim-cucumber"]
+	path = vim/bundle/vim-cucumber
+	url = git@github.com:tpope/vim-cucumber.git
