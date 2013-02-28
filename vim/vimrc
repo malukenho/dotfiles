@@ -122,3 +122,6 @@ function! RunTests(filename)
   exec ":!rspec " . a:filename
 endfunction
 
+" Git Gutter
+map <leader>ggn :call GitGutterNextHunk()<cr>
+map <leader>ggp :call GitGutterPrevHunk()<cr>
