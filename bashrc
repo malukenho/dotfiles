@@ -15,7 +15,7 @@ export RACK_ENV='development'
 export PYTHONPATH=~/lib/python2.7/site-packages
 
 # TMux PS1
-PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#I_#P") "$PWD")'
+PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 # Aliases
 alias ap='sudo apachectl'
