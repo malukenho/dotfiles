@@ -49,3 +49,6 @@
 [submodule "vim/bundle/vim-gitgutter"]
 	path = vim/bundle/vim-gitgutter
 	url = git@github.com:airblade/vim-gitgutter.git
+[submodule "vim/bundle/hardmode"]
+	path = vim/bundle/hardmode
+	url = git@github.com:wikitopian/hardmode.git

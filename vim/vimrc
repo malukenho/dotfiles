@@ -125,3 +125,7 @@ endfunction
 " Git Gutter
 map <leader>ggn :call GitGutterNextHunk()<cr>
 map <leader>ggp :call GitGutterPrevHunk()<cr>
+
+" Hard Mode
+nnoremap <leader>H <Esc>:call HardMode()<CR>
+nnoremap <leader>h <Esc>:call EasyMode()<CR>
