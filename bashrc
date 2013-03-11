@@ -32,6 +32,7 @@ alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/
 [[ $- == *i* ]] && . ~/.git-prompt/git-prompt.sh
 [[ $- == *i* ]] && . ~/.helpers/jump_to_project.sh
 [[ $- == *i* ]] && . ~/.helpers/titles.sh
+[[ $- == *i* ]] && . ~/.helpers/serve.sh
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
