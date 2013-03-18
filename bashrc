@@ -25,7 +25,7 @@ alias ll='ls -lahG'
 alias with='open /Applications/OfficeTime.app && open /Applications/CCMenu.app && open /Applications/Messages.app'
 alias ios='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 alias pryr='pry -I . -r config/environment'
-alias go='bundle exec foreman start'
+alias go='foreman start'
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 
 # Functions
