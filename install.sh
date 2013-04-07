@@ -15,6 +15,7 @@ ln -sh dotfiles/rvmrc .rvmrc
 ln -sh dotfiles/siegerc .siegerc
 ln -sh dotfiles/tmux .tmux
 ln -sh .tmux/tmux.conf .tmux.conf
+ln -sh .tmux/tmux-powerlinerc .tmux-powerlinerc
 ln -sh dotfiles/vim .vim
 ln -sh .vim/vimrc .vimrc
 ln -sh dotfiles/zshrc .zshrc
