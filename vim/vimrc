@@ -119,7 +119,14 @@ endfunction
 
 function! RunTests(filename)
   :w
-  exec ":!rspec " . a:filename
+
+  let has_spring = system("which spring")
+
+  if has_spring != ""
+    exec ":!spring rspec " . a:filename
+  else
+    exec ":!rspec " . a:filename
+  end
 endfunction
 
 " Git Gutter
@@ -132,3 +139,9 @@ nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
 " Disable Markdown folding
 let g:vim_markdown_folding_disabled=1
+
+" Notepad
+map <Leader>nn :split ~/DropBox/notepad.md<cr>
+
+" XMP Filter
+nmap <buffer> <Leader>xx <Plug>(xmpfilter-run)
