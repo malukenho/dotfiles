@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 PROJECT_PATH=~/Sites
 
@@ -11,7 +11,7 @@ function p() {
     i=0
     while [ $i -lt $count ]; do
       let num=$i+1
-      echo "[$num] ${results[$i]}"
+      echo "[$num] ${results[$num]}"
       let i+=1
     done
     echo ""
@@ -21,13 +21,12 @@ function p() {
     if [ ! -n "$choice" ]; then
       let num=0
     else
-      let num=$choice-1
+      let num=$choice
     fi
     echo ""
     cd ${results[$num]}
   elif [ $results ]; then
-    project=${results[0]}
-    cd $project
+    cd ${results[1]}
   else
     echo "Project '$1' not found"
   fi

@@ -10,6 +10,7 @@ set number
 set ruler
 set nofoldenable
 set nospell
+set cursorline
 
 set encoding=utf-8
 
@@ -67,8 +68,10 @@ set cmdheight=2
 au BufRead,BufNewFile conf set ft=apache
 au BufRead,BufNewFile Gemfile set ft=ruby
 au BufRead,BufNewFile Guardfile set ft=ruby
+au BufRead,BufNewFile Assetfile set ft=ruby
 au BufRead,BufNewFile *.hbs set ft=handlebars
 au BufRead,BufNewFile *.json set ft=json
+au BufRead,BufNewFile *.md set nolist wrap linebreak
 
 " Bubble single lines
 nmap <C-Up> ddkP
@@ -134,7 +137,6 @@ map <leader>ggn :call GitGutterNextHunk()<cr>
 map <leader>ggp :call GitGutterPrevHunk()<cr>
 
 " Hard Mode
-autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
 " Disable Markdown folding
@@ -145,3 +147,4 @@ map <Leader>nn :split ~/DropBox/notepad.md<cr>
 
 " XMP Filter
 nmap <buffer> <Leader>xx <Plug>(xmpfilter-run)
+nmap <buffer> <Leader>xc <Plug>(xmpfilter-mark)

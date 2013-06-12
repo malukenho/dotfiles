@@ -8,6 +8,9 @@ export PATH=~/bin:$PATH
 # EDITOR
 export EDITOR='/usr/bin/vim'
 
+# Ruby Tweaks
+export RUBY_GC_MALLOC_LIMIT=90000000
+
 # RACK_ENV
 export RACK_ENV='development'
 
@@ -22,10 +25,9 @@ alias ap='sudo apachectl'
 alias be='bundle exec'
 alias bake='be rake'
 alias ll='ls -lahG'
-alias with='open /Applications/OfficeTime.app && open /Applications/CCMenu.app && open /Applications/Messages.app'
+alias with='open /Applications/OfficeTime.app && open /Applications/CCMenu.app && open /Applications/Messages.app && open /Applications/Skype.app'
 alias ios='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 alias pryr='pry -I . -r config/environment'
-alias go='foreman start'
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
 
 # Functions
