@@ -19,7 +19,7 @@ function p() {
     read choice
 
     if [ ! -n "$choice" ]; then
-      let num=0
+      let num=1
     else
       let num=$choice
     fi

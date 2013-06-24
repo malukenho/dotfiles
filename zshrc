@@ -1,6 +1,5 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -40,12 +39,9 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx ruby rvm)
+plugins=(git ruby rvm tmux)
 
 source $ZSH/oh-my-zsh.sh
-
-# Customize to your needs...
-# export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/Users/jamie/.rvm/gems/ruby-2.0.0-p195/bin:/Users/jamie/.rvm/gems/ruby-2.0.0-p195@global/bin:/Users/jamie/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/jamie/.rvm/bin:/Users/jamie/bin:/Users/jamie/node_modules/.bin:/usr/local/share/npm/bin:/usr/local/sbin:/Users/jamie/.rvm/bin
 
 # EDITOR
 export EDITOR='/usr/bin/vim'
@@ -56,22 +52,32 @@ export RUBY_GC_MALLOC_LIMIT=90000000
 # Python
 export PYTHONPATH=~/lib/python2.7/site-packages
 
+# NPM
+PATH=/usr/local/share/npm/bin:$PATH
+
 # Aliases
 alias ap='sudo apachectl'
 alias be='bundle exec'
 alias bake='be rake'
 alias ll='ls -lahG'
-alias with='open /Applications/OfficeTime.app && open /Applications/CCMenu.app && open /Applications/Messages.app && open /Applications/Skype.app'
+alias with='open /Applications/OfficeTime.app && open /Applications/CCMenu.app && open /Applications/Messages.app'
 alias ios='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 alias pryr='pry -I . -r config/environment'
 alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
+alias sb='serve >/dev/null 2>&1 &'
+alias fo='foreman start'
+
+# Right prompt
+RPROMPT='%{$fg[red]%}$(rvm current)%{$reset_color%}%'
 
 # Functions
 [[ $- == *i* ]] && . ~/.helpers/jump_to_project.sh
 [[ $- == *i* ]] && . ~/.helpers/serve.sh
 
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+__rvm_project_rvmrc
 
 source ~/.zshrc.local
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

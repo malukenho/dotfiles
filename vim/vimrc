@@ -1,6 +1,9 @@
 " Vim Improvements
 set nocompatible
 
+" Shell
+set shell=/bin/sh
+
 " Pathogen
 call pathogen#infect()
 
@@ -71,7 +74,6 @@ au BufRead,BufNewFile Guardfile set ft=ruby
 au BufRead,BufNewFile Assetfile set ft=ruby
 au BufRead,BufNewFile *.hbs set ft=handlebars
 au BufRead,BufNewFile *.json set ft=json
-au BufRead,BufNewFile *.md set nolist wrap linebreak
 
 " Bubble single lines
 nmap <C-Up> ddkP
@@ -125,7 +127,15 @@ function! RunTests(filename)
 
   let has_spring = system("which spring")
 
-  if has_spring != ""
+  if has_spring == ""
+    let has_spring = 0
+  end
+
+  if has_spring == "spring not found"
+    let has_spring = 0
+  end
+
+  if has_spring
     exec ":!spring rspec " . a:filename
   else
     exec ":!rspec " . a:filename
