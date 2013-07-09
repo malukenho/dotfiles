@@ -19,3 +19,4 @@ ln -sh .tmux/tmux-powerlinerc .tmux-powerlinerc
 ln -sh dotfiles/vim .vim
 ln -sh .vim/vimrc .vimrc
 ln -sh dotfiles/zshrc .zshrc
+ln -sh dotfiles/emacs.d .emacs.d
