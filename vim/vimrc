@@ -65,7 +65,7 @@ let g:JSLintHighlightErrorLine = 0
 map <Leader>rs :let @/='' <CR>
 
 " Command height
-set cmdheight=2
+set cmdheight=1
 
 " Filetypes
 au BufRead,BufNewFile conf set ft=apache

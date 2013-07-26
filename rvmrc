@@ -1,2 +1,3 @@
 export rvm_path="/Users/jamie/.rvm"
 rvm_auto_reload_flag=1
+rvm_gemset_create_on_use_flag=1
