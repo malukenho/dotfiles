@@ -1,6 +1,3 @@
-[submodule "tmux/bundles/tmux-powerline"]
-	path = tmux/bundles/tmux-powerline
-	url = git@github.com:erikw/tmux-powerline.git
 [submodule "tmux/bundles/tmux-colors-solarized"]
 	path = tmux/bundles/tmux-colors-solarized
 	url = git@github.com:seebi/tmux-colors-solarized.git
@@ -55,6 +52,3 @@
 [submodule "vim/bundle/vim-ruby-xmpfilter"]
 	path = vim/bundle/vim-ruby-xmpfilter
 	url = git@github.com:t9md/vim-ruby-xmpfilter.git
-[submodule "vim/bundle/vim-powerline"]
-	path = vim/bundle/vim-powerline
-	url = git@github.com:Lokaltog/vim-powerline.git

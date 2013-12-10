@@ -51,9 +51,6 @@ color jgw256
 syntax match TAB /\t/
 hi TAB ctermbg=red ctermfg=white
 
-" Powerline
-let g:Powerline_symbols = 'fancy'
-
 " Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
