@@ -13,7 +13,6 @@ set number
 set ruler
 set nofoldenable
 set nospell
-set cursorline
 
 set encoding=utf-8
 
