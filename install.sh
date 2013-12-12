@@ -11,7 +11,6 @@ ln -sh dotfiles/gitignore .gitignore
 ln -sh dotfiles/git-prompt .git-prompt
 ln -sh dotfiles/helpers .helpers
 ln -sh dotfiles/irbrc .irbrc
-ln -sh dotfiles/rvmrc .rvmrc
 ln -sh dotfiles/siegerc .siegerc
 ln -sh dotfiles/tmux .tmux
 ln -sh .tmux/tmux.conf .tmux.conf
