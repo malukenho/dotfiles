@@ -3,6 +3,7 @@
 cd ~
 ln -sh dotfiles/bash_profile .bash_profile
 ln -sh dotfiles/bashrc .bashrc
+ln -sh dotfiles/bin bin
 ln -sh dotfiles/caprc .caprc
 ln -sh dotfiles/gemrc .gemrc
 ln -sh dotfiles/gitconfig .gitconfig
