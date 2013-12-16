@@ -22,23 +22,22 @@ alias with='open /Applications/OfficeTime.app && open /Applications/CCMenu.app &
 alias ios='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 alias tmux='tmux -2'
 
-# Functions
-[[ $- == *i* ]] && . ~/.helpers/jump_to_project.sh
-[[ $- == *i* ]] && . ~/.helpers/serve.sh
-
 # Ruby
 export RUBY_GC_MALLOC_LIMIT=90000000
 export RACK_ENV='development'
 
-# Python
-export PYTHONPATH=~/lib/python2.7/site-packages
-
 # chruby
 [[ $- == *i* ]] && source /usr/local/share/chruby/chruby.sh
 [[ $- == *i* ]] && source /usr/local/share/chruby/auto.sh
+
+# Python
+export PYTHONPATH=~/lib/python2.7/site-packages
 
 # Local settings
 source ~/.bashrc.local
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Helpers
+for f in $(ls $HOME/helpers/); do source "$HOME/helpers/$f"; done
