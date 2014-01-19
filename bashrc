@@ -5,6 +5,7 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=~/node_modules/.bin:$PATH
 export PATH=~/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
+export PATH=./bin:$PATH
 
 # Editor
 export EDITOR='/usr/bin/vim'
@@ -18,7 +19,7 @@ alias ap='sudo apachectl'
 alias bx='bundle exec'
 alias bake='bx rake'
 alias fo='bx foreman start'
-alias with='open /Applications/OfficeTime.app && open /Applications/CCMenu.app && open /Applications/Messages.app && open /Applications/Skype.app'
+alias with='open /Applications/Slack.app && open /Applications/OfficeTime.app && open /Applications/CCMenu.app && open /Applications/Messages.app'
 alias ios='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 alias tmux='tmux -2'
 
