@@ -5,8 +5,8 @@ let g:colors_name = "jgw256"
 
 hi Comment ctermfg=darkgray
 
-hi StatusLine ctermbg=darkgrey ctermfg=white
-hi StatusLineNC ctermbg=black ctermfg=lightgrey
+hi StatusLine ctermbg=lightgrey ctermfg=black
+hi StatusLineNC ctermbg=235 ctermfg=lightgrey
 hi VertSplit ctermbg=black ctermfg=lightgrey
 hi LineNr ctermfg=darkgray
 hi CursorLine guifg=NONE guibg=#121212 gui=NONE ctermfg=NONE ctermbg=234
