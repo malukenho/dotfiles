@@ -7,6 +7,10 @@ set shell=/bin/sh
 " Pathogen
 call pathogen#infect()
 
+" Project-specific vimrc
+set exrc
+set secure
+
 syntax on
 
 set number
@@ -134,7 +138,7 @@ function! RunTests(filename)
   if has_spring
     exec ":!spring rspec " . a:filename
   else
-    exec ":!rspec " . a:filename
+    exec ":!bundle exec rspec " . a:filename
   end
 endfunction
 
