@@ -11,7 +11,16 @@ export PATH=./bin:$PATH
 export EDITOR='/usr/bin/vim'
 
 # Prompt
-export PS1="\[\e[38;5;74m\]\W \[\e[38;5;178m\]$\[\e[0m\] "
+function current_branch {
+  b=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+
+  if [ -n "$b" ]; then
+    echo " $b"
+  else
+    echo ""
+  fi
+}
+export PS1="\[\e[38;5;74m\]\W\[\e[38;5;1m\]\$(current_branch) \[\e[38;5;178m\]$\[\e[0m\] "
 
 # Aliases
 alias ll='ls -lahG'
