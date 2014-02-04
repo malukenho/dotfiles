@@ -28,6 +28,8 @@ alias fo='bx foreman start'
 alias with='open /Applications/Slack.app && open /Applications/OfficeTime.app && open /Applications/CCMenu.app && open /Applications/Messages.app'
 alias ios='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 alias tmux='tmux -2'
+alias jek='bx jekyll server --watch'
+alias bro='broccoli serve'
 
 # Ruby
 export RUBY_GC_MALLOC_LIMIT=90000000
