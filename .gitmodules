@@ -1,6 +1,3 @@
-[submodule "tmux/bundles/tmux-colors-solarized"]
-	path = tmux/bundles/tmux-colors-solarized
-	url = git@github.com:seebi/tmux-colors-solarized.git
 [submodule "vim/bundle/JSON.vim"]
 	path = vim/bundle/JSON.vim
 	url = git@github.com:vim-scripts/JSON.vim.git
