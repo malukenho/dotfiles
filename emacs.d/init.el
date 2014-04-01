@@ -1,18 +1,15 @@
-(require 'package)
+(menu-bar-mode -1)
 
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(setq backup-directory-alist
+  `((".*" . ,temporary-file-directory)))
 
-(package-initialize)
+(setq auto-save-file-name-transforms
+  `((".*" ,temporary-file-directory t)))
 
-(when (not package-archive-contents)
-  (package-refresh-contents))
+(global-linum-mode t)
 
-(fset 'insertPound "#")
-(define-key global-map "\M-3" 'insertPound)
+(setq linum-format "%d ")
 
 (custom-set-variables
+ '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido)))
-
-(global-linum-mode 1)
-(setq linum-format "%3d ")
