@@ -66,10 +66,15 @@
 
 ; Org Mode
 
+(setq org-agenda-files (list "~/Dropbox/org"))
+(setq org-directory "~/Dropbox/org")
 (setq org-log-done 'time)
 
 (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c C-l") 'org-insert-link)
 (global-set-key (kbd "C-c a t") 'org-todo-list)
 
-(setq org-agenda-files (list "~/Dropbox/org/me.org"))
+; Term
+
+(setq multi-term-program "/bin/bash")
+(put 'upcase-region 'disabled nil)
