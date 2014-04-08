@@ -49,7 +49,7 @@ export PYTHONPATH=~/lib/python2.7/site-packages
 # Local settings
 source ~/.bashrc.local
 
-### Added by the Heroku Toolbelt
+# Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Helpers
