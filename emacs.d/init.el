@@ -25,8 +25,12 @@
 
 ; Line Numbers
 
-(global-linum-mode t)
-(setq linum-format "%d ")
+(setq-default linum-format "%d ")
+
+; Whitespace
+
+(setq-default require-final-newline t)
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ; Tabs
 
