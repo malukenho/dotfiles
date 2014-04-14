@@ -125,17 +125,7 @@ endfunction
 function! RunTests(filename)
   :w
 
-  let has_spring = system("which spring")
-
-  if has_spring == ""
-    let has_spring = 0
-  end
-
-  if has_spring == "spring not found"
-    let has_spring = 0
-  end
-
-  if has_spring
+  if system("which spring") != ""
     exec ":!spring rspec " . a:filename
   else
     exec ":!bundle exec rspec " . a:filename
