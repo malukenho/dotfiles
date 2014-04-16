@@ -5,13 +5,15 @@
   (package-initialize)
   (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t))
 
-; Backups
+(add-to-list 'load-path "~/.emacs.d/other")
 
-(setq backup-directory-alist
-  `((".*" . ,temporary-file-directory)))
+(require 'rcodetools)
 
-(setq auto-save-file-name-transforms
-  `((".*" ,temporary-file-directory t)))
+; Backups, Auto-save and Lockfiles
+
+(setq auto-save-default nil)
+(setq make-backup-files nil)
+(setq create-lockfiles nil)
 
 ; Menu Bar
 
@@ -36,6 +38,7 @@
 
 (setq-default indent-tabs-mode nil)
 (setq-default css-indent-offset 2)
+(setq-default js-indent-level 2)
 
 ; Ruby
 
@@ -73,8 +76,10 @@
 (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c C-l") 'org-insert-link)
 (global-set-key (kbd "C-c a t") 'org-todo-list)
+(global-set-key (kbd "C-c a m") (lambda () (interactive) (find-file "~/Dropbox/org/me.org")))
+(global-set-key (kbd "C-c a w") (lambda () (interactive) (find-file "~/Dropbox/org/wa.org")))
 
-; Term
+; Shortcuts
 
-(setq multi-term-program "/bin/bash")
-(put 'upcase-region 'disabled nil)
+(global-set-key (kbd "C-c a e") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
+(global-set-key (kbd "C-c r x") 'xmp)

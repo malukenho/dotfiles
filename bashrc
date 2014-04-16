@@ -1,3 +1,6 @@
+# TERMinfo
+export TERMINFO=~/.terminfo
+
 # Extra PATHs
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
@@ -16,7 +19,9 @@ function ps1_branch {
   b=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
   if [ -n "$b" ]; then echo " $b"; fi
 }
-export PS1="\[\e[38;5;74m\]\W\[\e[38;5;1m\]\$(ps1_branch) \[\e[38;5;178m\]$\[\e[0m\] "
+export PS1="\e[36m\W\e[31m\$(ps1_branch) \e[33m$\e[0m "
+# export PS1="\e[33m$\e[0m " # simple PS1
+
 
 # Aliases
 alias ll='ls -lahG'
@@ -34,6 +39,8 @@ alias bb='broc build'
 alias bap='bx cap'
 alias tmux='TERM=xterm-256color tmux'
 alias bo='bundle open'
+alias bu='bundle update -j8'
+alias bi='bundle install -j8'
 
 # Ruby
 export RUBY_GC_MALLOC_LIMIT=90000000
