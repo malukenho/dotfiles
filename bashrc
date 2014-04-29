@@ -1,6 +1,3 @@
-# TERMinfo
-export TERMINFO=~/.terminfo
-
 # Extra PATHs
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
@@ -14,14 +11,33 @@ export PATH=./bin:$PATH
 # Editor
 export EDITOR='/usr/bin/vim'
 
+# Scheme
+export MITSCHEME_LIBRARY_PATH="/Applications/MIT\:GNU\ Scheme.app/Contents/Resources"
+export MIT_SCHEME_EXE="/Users/jamie/bin/scheme"
+
+# Docker
+export DOCKER_HOST=tcp://localhost:4243
+
 # Prompt
 function ps1_branch {
   b=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
   if [ -n "$b" ]; then echo " $b"; fi
 }
-export PS1="\e[36m\W\e[31m\$(ps1_branch) \e[33m$\e[0m "
-# export PS1="\e[33m$\e[0m " # simple PS1
+function ps1_ruby {
+  echo " $(ruby -v | grep -o '\d\.\d\.\d' | head -1)"
+}
 
+  black="\[\e[30m\]"
+    red="\[\e[31m\]"
+  green="\[\e[32m\]"
+ yellow="\[\e[33m\]"
+   blue="\[\e[34m\]"
+magenta="\[\e[35m\]"
+   cyan="\[\e[36m\]"
+  white="\[\e[37m\]"
+  reset="\[\e[0m\]"
+
+export PS1="$blue\W$magenta\$(ps1_branch)$red\$(ps1_ruby)\n$yellow\$$reset "
 
 # Aliases
 alias ll='ls -lahG'

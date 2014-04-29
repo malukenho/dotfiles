@@ -45,6 +45,7 @@
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '(".rake$" . ruby-mode))
 
 ; CSS
 
@@ -83,3 +84,6 @@
 
 (global-set-key (kbd "C-c a e") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
 (global-set-key (kbd "C-c r x") 'xmp)
+(global-set-key (kbd "C-c m d") 'multi-term-dedicated-toggle)
+(global-set-key (kbd "C-c m e") 'evil-mode)
+(global-set-key (kbd "C-c m a") 'auto-fill-mode)

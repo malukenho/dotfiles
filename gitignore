@@ -1,8 +1,10 @@
-.*-cache
 *.swp
+.*-cache
 .DS_Store
+.bundle
 .env
+_site
 backup
+node_modules
 tags
 tmp
-_site

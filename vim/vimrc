@@ -125,7 +125,7 @@ endfunction
 function! RunTests(filename)
   :w
 
-  if system("grep spring Gemfile") != ""
+  if system("grep spring-commands-rspec Gemfile") != ""
     exec ":!spring rspec " . a:filename
   else
     exec ":!bundle exec rspec " . a:filename
