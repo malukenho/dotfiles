@@ -1,30 +1,11 @@
-" Based on
 runtime colors/ir_black.vim
 
 let g:colors_name = "jgw256"
 
-hi Comment ctermfg=darkgray
-
-hi StatusLine ctermbg=lightgrey ctermfg=black
-hi StatusLineNC ctermbg=235 ctermfg=lightgrey
-hi VertSplit ctermbg=black ctermfg=lightgrey
-hi LineNr ctermfg=darkgray
-hi CursorLine guifg=NONE guibg=#121212 gui=NONE ctermfg=NONE ctermbg=234
-hi Function guifg=#FFD2A7 guibg=NONE gui=NONE ctermfg=yellow ctermbg=NONE cterm=NONE
-hi Visual ctermfg=NONE ctermbg=236 guibg=NONE
-
-hi Error guifg=NONE guibg=NONE gui=undercurl ctermfg=16 ctermbg=red cterm=NONE guisp=#FF6C60
-hi ErrorMsg guifg=white guibg=#FF6C60 gui=BOLD ctermfg=16 ctermbg=red cterm=NONE
-hi WarningMsg guifg=white guibg=#FF6C60 gui=BOLD ctermfg=16 ctermbg=red cterm=NONE
-hi SpellBad guifg=white guibg=#FF6C60 gui=BOLD ctermfg=16 ctermbg=160 cterm=NONE
-
-hi Operator guifg=#6699CC guibg=NONE gui=NONE ctermfg=lightblue ctermbg=NONE cterm=NONE
-
-hi DiffAdd term=reverse cterm=bold ctermbg=lightgreen ctermfg=16
-hi DiffChange term=reverse cterm=bold ctermbg=lightblue ctermfg=16
-hi DiffText term=reverse cterm=bold ctermbg=lightgray ctermfg=16
-hi DiffDelete term=reverse cterm=bold ctermbg=lightred ctermfg=16
-
-hi PmenuSel ctermfg=16 ctermbg=156
-
-hi ColorColumn ctermbg=52
+hi Function      ctermfg=yellow    ctermbg=NONE
+hi LineNr        ctermfg=238       ctermbg=NONE
+hi StatusLine    ctermfg=black     ctermbg=yellow
+hi StatusLineNC  ctermfg=yellow    ctermbg=236
+hi VertSplit     ctermfg=236       ctermbg=NONE
+hi Visual        ctermfg=NONE      ctermbg=236
+hi Comment       ctermfg=darkgrey  ctermbg=NONE

@@ -22,6 +22,12 @@
 ; IDO Mode
 
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("33c5a452a4095f7e4f6746b66f322ef6da0e770b76c0ed98a438e76c497040bb" "53c542b560d232436e14619d058f81434d6bbcdc42e00a4db53d2667d841702e" "60f04e478dedc16397353fb9f33f0d895ea3dab4f581307fbf0aa2f07e658a40" default)))
+ '(face-font-family-alternatives (quote (("Consolas" "monospace" "fixed") ("courier" "CMU Typewriter Text" "fixed") ("Sans Serif" "helv" "helvetica" "arial" "fixed") ("helv" "helvetica" "arial" "fixed"))))
  '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido)))
 
@@ -53,19 +59,21 @@
 
 ; Theme
 
-(custom-set-variables
- '(custom-safe-themes (quote ("60f04e478dedc16397353fb9f33f0d895ea3dab4f581307fbf0aa2f07e658a40" default))))
-
 (load-theme 'monokai)
+
+(defun on-after-init ()
+  (unless (display-graphic-p (selected-frame))
+    (set-face-background 'default "unspecified-bg" (selected-frame))))
+
+(add-hook 'window-setup-hook 'on-after-init)
 
 ; Fonts
 
-(custom-set-variables
- '(face-font-family-alternatives (quote (("Consolas" "monospace" "fixed")
-                                         ("courier" "CMU Typewriter Text" "fixed")
-                                         ("Sans Serif" "helv" "helvetica" "arial" "fixed")
-                                         ("helv" "helvetica" "arial" "fixed")))))
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(default ((t (:background nil)))))
 
 ; Org Mode

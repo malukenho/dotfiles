@@ -4,9 +4,7 @@ tmux split-window
 tmux resize-pane -D 15
 tmux split-window -h
 tmux resize-pane -R 20
-tmux split-window
-tmux send-keys -t 3 "bundle exec foreman start" C-m
-tmux send-keys -t 2 "bundle exec spork" C-m
+tmux send-keys -t 2 "bundle exec foreman start" C-m
 tmux send-keys -t 1 "bundle exec guard" C-m C-l
 tmux send-keys -t 0 C-l
 tmux select-pane -t 0
