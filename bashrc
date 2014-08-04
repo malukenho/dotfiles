@@ -17,7 +17,6 @@ export MIT_SCHEME_EXE="/Users/jamie/bin/scheme"
 
 # Docker
 export DOCKER_HOST=tcp://:2375
-# export DOCKER_HOST=tcp://192.168.59.103:2375
 
 # Node
 export NODE_PATH=./node_modules:/usr/local/lib/node_modules
@@ -57,7 +56,7 @@ alias bake='bx rake'
 alias bxg='bx guard'
 alias fo='bx foreman start'
 alias with='open /Applications/Slack.app && open /Applications/OfficeTime.app'
-alias ios='open /Applications/Xcode6-Beta.app/Contents/Applications/iOS\ Simulator.app'
+alias ios='open /Applications/Xcode6-Beta4.app/Contents/Applications/iOS\ Simulator.app'
 alias jek='jekyll server --watch'
 alias broc='broccoli'
 alias bs='broc serve'
@@ -80,9 +79,6 @@ chruby 2.1.2
 # Python
 export PYTHONPATH=~/lib/python2.7/site-packages
 
-# Local settings
-source ~/.bashrc.local
-
 # Other paths
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH=./node_modules/.bin:$PATH
@@ -90,3 +86,6 @@ export PATH=./bin:$PATH
 
 # Helpers
 for f in $(ls $HOME/helpers/); do source "$HOME/helpers/$f"; done
+
+# Local settings
+source ~/.bashrc.local

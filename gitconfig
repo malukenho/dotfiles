@@ -23,18 +23,25 @@
   changed = green
   untracked = cyan
 [alias]
+  a = add
+  b = branch
+  c = commit
+  d = diff
+  l = log \
+    --color \
+    --graph \
+    --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
+    --abbrev-commit \
+    --
+  p = push
+  s = status
+  x = !gitx
   aa = add --all
-  br = branch
-  ci = commit
   co = checkout
   dc = diff --cached
-  st = status
   wtf = !git-wtf
-  x = !gitx
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 [merge]
   tool = vimdiff
-
 [push]
 	default = current
 [branch]
