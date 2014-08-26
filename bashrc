@@ -46,6 +46,7 @@ magenta="\[\e[35m\]"
   reset="\[\e[0m\]"
 
 export PS1="${yellow}» $blue\w$magenta\$(ps1_branch)$red\$(ps1_ruby)\n$yellow\$$reset "
+# export PS1="${yellow}» $blue\w$magenta\$(ps1_branch)\n$yellow\$$reset "
 # export PS1="$blue\W ${yellow}$ ${reset}"
 
 # Aliases
@@ -57,12 +58,12 @@ alias bxg='bx guard'
 alias fo='bx foreman start'
 alias with='open /Applications/Slack.app && open /Applications/OfficeTime.app'
 alias ios='open /Applications/Xcode6-Beta4.app/Contents/Applications/iOS\ Simulator.app'
-alias jek='jekyll server --watch'
+alias jek='jekyll serve --watch'
 alias broc='broccoli'
 alias bs='broc serve'
 alias bb='broc build'
 alias bap='bx cap'
-alias tmux='TERM=xterm-256color tmux'
+alias tmux='TERM=xterm-256color tmux -2 -u'
 alias bo='bundle open'
 alias bu='bundle update -j8'
 alias bi='bundle install -j8'
@@ -82,7 +83,6 @@ export PYTHONPATH=~/lib/python2.7/site-packages
 # Other paths
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH=./node_modules/.bin:$PATH
-export PATH=./bin:$PATH
 
 # Helpers
 for f in $(ls $HOME/helpers/); do source "$HOME/helpers/$f"; done
