@@ -1,25 +1,33 @@
 # TERM
 export TERM=xterm-256color
 
-# Extra PATHs
+# PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
-export PATH=/Applications/MIT\:GNU\ Scheme.app/Contents/Resources:$PATH
+export PATH=/usr/local/heroku/bin:$PATH
+export PATH=/Applications/Android/sdk/platform-tools:$PATH
+export PATH=/Applications/Android/sdk/tools:$PATH
 export PATH=~/bin:$PATH
 
 # Editor
 export EDITOR='/usr/bin/vim'
-
-# Scheme
-export MITSCHEME_LIBRARY_PATH="/Applications/MIT\:GNU\ Scheme.app/Contents/Resources"
-export MIT_SCHEME_EXE="/Users/jamie/bin/scheme"
 
 # Docker
 export DOCKER_HOST=tcp://:2375
 
 # Node
 export NODE_PATH=./node_modules:/usr/local/lib/node_modules
+
+# Ruby
+export RUBY_GC_MALLOC_LIMIT=90000000
+export RACK_ENV='development'
+
+[[ $- == *i* ]] && source /usr/local/share/chruby/chruby.sh
+chruby 2.1.2
+
+# Python
+export PYTHONPATH=~/lib/python2.7/site-packages
 
 # Prompt
 function ps1_branch {
@@ -68,21 +76,6 @@ alias bo='bundle open'
 alias bu='bundle update -j8'
 alias bi='bundle install -j8'
 alias sr='spring rspec'
-
-# Ruby
-export RUBY_GC_MALLOC_LIMIT=90000000
-export RACK_ENV='development'
-
-# chruby
-[[ $- == *i* ]] && source /usr/local/share/chruby/chruby.sh
-chruby 2.1.2
-
-# Python
-export PYTHONPATH=~/lib/python2.7/site-packages
-
-# Other paths
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH=./node_modules/.bin:$PATH
 
 # Helpers
 for f in $(ls $HOME/helpers/); do source "$HOME/helpers/$f"; done
