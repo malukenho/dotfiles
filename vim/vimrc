@@ -7,6 +7,12 @@ set shell=/bin/sh
 " Pathogen
 call pathogen#infect()
 
+" Mouse
+
+if has('mouse')
+  set mouse=nv
+endif
+
 " Project-specific vimrc
 set exrc
 set secure
