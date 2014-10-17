@@ -56,6 +56,7 @@ magenta="\[\e[35m\]"
 export PS1="${yellow}» $blue\w$magenta\$(ps1_branch)$red\$(ps1_ruby)\n$yellow\$$reset "
 # export PS1="${yellow}» $blue\w$magenta\$(ps1_branch)\n$yellow\$$reset "
 # export PS1="$blue\W ${yellow}$ ${reset}"
+# export PS1="${yellow}$ ${reset}"
 
 # Aliases
 alias ll='ls -lahG'
