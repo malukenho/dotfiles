@@ -5,9 +5,9 @@ export TERM=xterm-256color
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
-export PATH=/usr/local/heroku/bin:$PATH
 export PATH=/Applications/Android/sdk/platform-tools:$PATH
 export PATH=/Applications/Android/sdk/tools:$PATH
+export PATH=~/Sites/nand2tetris/tools:$PATH
 export PATH=~/bin:$PATH
 
 # Editor
@@ -22,9 +22,10 @@ export NODE_PATH=./node_modules:/usr/local/lib/node_modules
 # Ruby
 export RUBY_GC_MALLOC_LIMIT=90000000
 export RACK_ENV='development'
+export CC=/usr/bin/gcc
 
 [[ $- == *i* ]] && source /usr/local/share/chruby/chruby.sh
-chruby 2.1.2
+chruby 2.1.4
 
 # Python
 export PYTHONPATH=~/lib/python2.7/site-packages
@@ -67,7 +68,7 @@ alias bxg='bx guard'
 alias fo='bx foreman start'
 alias with='open /Applications/Slack.app && open /Applications/OfficeTime.app'
 alias ios='open /Applications/Xcode.app/Contents/Applications/iOS\ Simulator.app'
-alias jek='jekyll serve --watch'
+alias jek='bx jekyll serve --watch'
 alias broc='broccoli'
 alias bs='broc serve'
 alias bb='broc build'
