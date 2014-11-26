@@ -25,6 +25,9 @@ set nospell
 
 set encoding=utf-8
 
+" Allow hidden buffers
+set hidden
+
 " Whitespace stuff
 set nowrap
 set tabstop=2
@@ -65,7 +68,10 @@ set directory=~/.vim/backup
 let g:JSLintHighlightErrorLine = 0
 
 " Reset search
-map <Leader>rs :noh<CR>
+map <C-l> :set hlsearch!<cr>
+
+" Toggle relative numbers
+map <C-\> :set relativenumber!<cr>
 
 " Command height
 set cmdheight=1

@@ -25,7 +25,7 @@ export RACK_ENV='development'
 export CC=/usr/bin/gcc
 
 [[ $- == *i* ]] && source /usr/local/share/chruby/chruby.sh
-chruby 2.1.4
+chruby 2.1.5
 
 # Python
 export PYTHONPATH=~/lib/python2.7/site-packages
