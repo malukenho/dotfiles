@@ -19,10 +19,6 @@
 
 (menu-bar-mode -1)
 
-; Theme
-
-(load-theme "hickey")
-
 ; IDO Mode
 
 (custom-set-variables
@@ -74,9 +70,3 @@
 (global-set-key (kbd "C-c m d") 'multi-term-dedicated-toggle)
 (global-set-key (kbd "C-c m e") 'evil-mode)
 (global-set-key (kbd "C-c m a") 'auto-fill-mode)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:background nil)))))
