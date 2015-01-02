@@ -78,8 +78,13 @@
   (interactive)
   (insert (format-time-string "%H:%M " (current-time))))
 
+(defun insert-date ()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d" (current-time))))
+
 (global-set-key (kbd "C-c e e") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
 (global-set-key (kbd "C-c i t") 'insert-time)
+(global-set-key (kbd "C-c i d") 'insert-date)
 (global-set-key (kbd "C-c r x") 'xmp)
 (global-set-key (kbd "C-c m d") 'multi-term-dedicated-toggle)
 (global-set-key (kbd "C-c m e") 'evil-mode)
