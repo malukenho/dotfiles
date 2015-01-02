@@ -15,13 +15,22 @@
 (setq make-backup-files nil)
 (setq create-lockfiles nil)
 
+; Important keys
+
+(setq ns-right-alternate-modifier (quote none))
+
 ; Menu Bar
 
 (menu-bar-mode -1)
+(tool-bar-mode -1)
 
 ; IDO Mode
 
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido)))
 
@@ -65,8 +74,18 @@
 
 ; Shortcuts
 
-(global-set-key (kbd "C-c a e") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
+(defun insert-time ()
+  (interactive)
+  (insert (format-time-string "%H:%M " (current-time))))
+
+(global-set-key (kbd "C-c e e") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
+(global-set-key (kbd "C-c i t") 'insert-time)
 (global-set-key (kbd "C-c r x") 'xmp)
 (global-set-key (kbd "C-c m d") 'multi-term-dedicated-toggle)
 (global-set-key (kbd "C-c m e") 'evil-mode)
 (global-set-key (kbd "C-c m a") 'auto-fill-mode)
+(global-set-key (kbd "C-§") 'magit-status)
+
+; Faces
+
+(set-default-font "Menlo 14")
