@@ -21,7 +21,6 @@
 
 ; Menu Bar
 
-(menu-bar-mode -1)
 (tool-bar-mode -1)
 
 ; IDO Mode
@@ -83,6 +82,7 @@
   (insert (format-time-string "%Y-%m-%d" (current-time))))
 
 (global-set-key (kbd "C-c e e") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
+(global-set-key (kbd "C-c e j") (lambda () (interactive) (find-file "~/Desktop/JOURNAL")))
 (global-set-key (kbd "C-c i t") 'insert-time)
 (global-set-key (kbd "C-c i d") 'insert-date)
 (global-set-key (kbd "C-c r x") 'xmp)
