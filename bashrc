@@ -78,6 +78,7 @@ alias bo='bundle open'
 alias bu='bundle update -j8'
 alias bi='bundle install -j8'
 alias sr='spring rspec'
+alias nom='rm -rf node_modules; npm cache clean'
 
 # Helpers
 for f in $(ls $HOME/helpers/); do source "$HOME/helpers/$f"; done
