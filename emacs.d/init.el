@@ -26,10 +26,6 @@
 ; IDO Mode
 
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(ido-enable-flex-matching t)
  '(ido-mode (quote both) nil (ido)))
 
@@ -48,12 +44,20 @@
 (setq-default css-indent-offset 2)
 (setq-default js-indent-level 2)
 
+; Evil
+
+(setq-default evil-auto-indent nil)
+
 ; Ruby
 
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Guardfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '(".rake$" . ruby-mode))
+
+; Markdown
+
+(add-to-list 'auto-mode-alist '(".apib$" . markdown-mode))
 
 ; CSS
 
@@ -89,8 +93,29 @@
 (global-set-key (kbd "C-c m d") 'multi-term-dedicated-toggle)
 (global-set-key (kbd "C-c m e") 'evil-mode)
 (global-set-key (kbd "C-c m a") 'auto-fill-mode)
-(global-set-key (kbd "C-§") 'magit-status)
+(global-set-key (kbd "§") 'magit-status)
 
 ; Faces
 
-(set-default-font "Menlo 14")
+(set-frame-font "Inconsolata-g 15")
+
+; Terminal Emulation
+
+(when (require 'term nil t) ; only if term can be loaded..
+  (setq term-bind-key-alist
+        (list (cons "C-c C-c" 'term-interrupt-subjob)
+              (cons "C-p" 'previous-line)
+              (cons "C-n" 'next-line)
+              (cons "M-f" 'term-send-forward-word)
+              (cons "M-b" 'term-send-backward-word)
+              (cons "C-c C-j" 'term-line-mode)
+              (cons "C-c C-k" 'term-char-mode)
+              (cons "M-DEL" 'term-send-backward-kill-word)
+              (cons "M-d" 'term-send-forward-kill-word)
+              (cons "<C-left>" 'term-send-backward-word)
+              (cons "<C-right>" 'term-send-forward-word)
+              (cons "C-r" 'term-send-reverse-search-history)
+              (cons "M-p" 'term-send-raw-meta)
+              (cons "M-y" 'term-send-raw-meta)
+              (cons "C-y" 'term-send-raw)
+              (cons "s-v" 'term-paste))))
