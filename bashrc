@@ -37,11 +37,11 @@ function ps1_branch {
 }
 
 function ps1_ruby {
-  echo " ruby-$(ruby -v | grep -o '\d\.\d\+\.\d\+' | head -1)"
+  echo "ruby-$(ruby -v | grep -o '\d\.\d\+\.\d\+' | head -1)"
 }
 
 function ps1_node {
-  echo " node-$(node -v | grep -o '\d\+\.\d\+\.\d\+' | head -1)"
+  echo "node-$(node -v | grep -o '\d\+\.\d\+\.\d\+' | head -1)"
 }
 
   black="\[\e[30m\]"
@@ -54,7 +54,7 @@ magenta="\[\e[35m\]"
   white="\[\e[37m\]"
   reset="\[\e[0m\]"
 
-export PS1="${yellow}» $blue\w$magenta\$(ps1_branch)$red\$(ps1_ruby)\n$yellow\$$reset "
+export PS1="${yellow}» $blue\w$magenta\$(ps1_branch)$red \$(ps1_ruby)$green \$(ps1_node)$reset\n$yellow\$$reset "
 # export PS1="${yellow}» $blue\w$magenta\$(ps1_branch)\n$yellow\$$reset "
 # export PS1="$blue\W ${yellow}$ ${reset}"
 # export PS1="${yellow}$ ${reset}"
@@ -78,7 +78,13 @@ alias bo='bundle open'
 alias bu='bundle update -j8'
 alias bi='bundle install -j8'
 alias sr='spring rspec'
-alias nom='rm -rf node_modules; npm cache clean'
+alias bup='brew update && brew upgrade'
+alias nom='rm -rf node_modules && npm cache clean && npm i'
+alias bom='rm -rf bower_components && bower cache clean && bower i'
+alias nombom='nom && bom && rm -rf tmp'
+alias bubu='brew update && brew upgrade'
+alias rdd='sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist'
+alias zipalign='/Applications/Android/sdk/build-tools/android-4.4W/zipalign'
 
 # Helpers
 for f in $(ls $HOME/helpers/); do source "$HOME/helpers/$f"; done

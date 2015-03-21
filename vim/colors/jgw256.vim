@@ -16,3 +16,8 @@ hi Pmenu         ctermfg=white     ctermbg=236
 hi PmenuSel      ctermfg=white     ctermbg=238
 hi PmenuSbar     ctermfg=NONE      ctermbg=236
 hi PmenuThumb    ctermfg=NONE      ctermbg=white
+
+hi DiffAdd       ctermfg=white     ctermbg=green
+hi DiffChange    ctermfg=white     ctermbg=blue
+hi DiffDelete    ctermfg=white     ctermbg=red
+hi DiffText      ctermfg=white     ctermbg=red
