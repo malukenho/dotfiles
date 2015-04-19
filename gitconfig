@@ -45,3 +45,5 @@
 	default = current
 [branch]
 	autosetuprebase = always
+[url "https://"]
+	insteadOf = git://

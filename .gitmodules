@@ -73,6 +73,6 @@
 [submodule "vim/bundle/vim-speeddating"]
 	path = vim/bundle/vim-speeddating
 	url = https://github.com/tpope/vim-speeddating
-[submodule "vim/bundle/rust"]
-	path = vim/bundle/rust
-	url = git@github.com:wting/rust.vim.git
+[submodule "vim/bundle/vim-toml"]
+	path = vim/bundle/vim-toml
+	url = git@github.com:cespare/vim-toml.git

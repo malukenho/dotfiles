@@ -21,3 +21,7 @@ hi DiffAdd       ctermfg=white     ctermbg=green
 hi DiffChange    ctermfg=white     ctermbg=blue
 hi DiffDelete    ctermfg=white     ctermbg=red
 hi DiffText      ctermfg=white     ctermbg=red
+
+hi TabLine       ctermfg=yellow    ctermbg=238      cterm=none
+hi TabLineSel    ctermfg=black     ctermbg=yellow   cterm=none
+hi TabLineFill   ctermfg=238       ctermbg=none
