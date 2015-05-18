@@ -82,9 +82,11 @@ alias bup='brew update && brew upgrade'
 alias nom='rm -rf node_modules && npm cache clean && npm i'
 alias bom='rm -rf bower_components && bower cache clean && bower i'
 alias nombom='nom && bom && rm -rf tmp'
-alias bubu='brew update && brew upgrade'
+alias bubu='brew update && brew upgrade --all'
 alias rdd='sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist'
 alias zipalign='/Applications/Android/sdk/build-tools/android-4.4W/zipalign'
+alias v='vagrant'
+alias nl='npm_lazy --config ~/.npm_lazy.config.js'
 
 # Helpers
 for f in $(ls $HOME/helpers/); do source "$HOME/helpers/$f"; done
