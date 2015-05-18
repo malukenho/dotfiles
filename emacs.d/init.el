@@ -119,3 +119,8 @@
               (cons "M-y" 'term-send-raw-meta)
               (cons "C-y" 'term-send-raw)
               (cons "s-v" 'term-paste))))
+
+; Scheme
+
+(setq scheme-program-name "/Applications/mit-scheme.app/Contents/Resources/mit-scheme")
+(require 'xscheme)
