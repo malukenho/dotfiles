@@ -76,3 +76,6 @@
 [submodule "vim/bundle/vim-toml"]
 	path = vim/bundle/vim-toml
 	url = git@github.com:cespare/vim-toml.git
+[submodule "vim/bundle/rust"]
+	path = vim/bundle/rust
+	url = git@github.com:rust-lang/rust.vim.git
